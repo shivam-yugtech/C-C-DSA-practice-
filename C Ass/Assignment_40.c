@@ -81,7 +81,7 @@ int count_word(char str[])
     }
     return count+1;
 }
-int splitToStrings(char str[], char s[][20],int n)
+int splitWordfromStrings(char str[], char s[][20],int n)
 {
     int no_of_words,i,j=-1,k;
     no_of_words=count_word(str);
@@ -98,31 +98,31 @@ int splitToStrings(char str[], char s[][20],int n)
     }
     return no_of_words;
 }
-int remove_duplicate(char s[][20],int n)
-{
-    int i,j,k=0;
-    char temp[n][20];
-    sort(s,n);
-    strcpy(temp[k],s[0]);
-    for(i=0;i<n-1;)
-    {
-        for(j=i+1;j<n;j++)
-        {
-            if(strcmp(s[i],s[j])==0)
-                continue;
-            else
-            {
-                i=j;
-                k++;    
-                strcpy(temp[k],s[j]);
-                break;
-            }
-        }
-        if(j==n)
-            break;
-    }
-    for(i=0;i<=k;i++)
-        strcpy(s[i],temp[i]);
+// int remove_duplicate(char s[][20],int n)
+// {
+//     int i,j,k=0;
+//     char temp[n][20];
+//     sort(s,n);
+//     strcpy(temp[k],s[0]);
+//     for(i=0;i<n-1;)
+//     {
+//         for(j=i+1;j<n;j++)
+//         {
+//             if(strcmp(s[i],s[j])==0)
+//                 continue;
+//             else
+//             {
+//                 i=j;
+//                 k++;    
+//                 strcpy(temp[k],s[j]);
+//                 break;
+//             }
+//         }
+//         if(j==n)
+//             break;
+//     }
+//     for(i=0;i<=k;i++)
+//         strcpy(s[i],temp[i]);
     
-    return k+1;
-}
+//     return k+1;
+// }
