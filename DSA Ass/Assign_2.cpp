@@ -13,8 +13,8 @@ class Array
         int *ptr;
     public:
         Array(int);
-        Array(Array &);
-        Array& operator=(Array &);
+        Array(Array &);   // deep copy
+        Array& operator=(Array &);   // deep copy
         void create_Array(int); 
         bool is_empty();
         void Append(int);
@@ -49,7 +49,7 @@ Array::Array(Array &arr)  // deep copy
             ptr[i]=arr.ptr[i];
     }
 }
-Array& Array::operator=(Array &arr)
+Array& Array::operator=(Array &arr)   // deep copy
 {
     if(this != &arr){
         if(arr.ptr = nullptr)

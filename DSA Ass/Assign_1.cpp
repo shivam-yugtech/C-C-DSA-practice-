@@ -36,7 +36,7 @@ Array::Array(int cap)
 void Array::create_Array(int cap)
 {
     if(cap<1)
-            throw INVALID_CAPACITY;
+        throw INVALID_CAPACITY;
         if(ptr!=nullptr)
         capacity=cap;
         last_index=-1;
