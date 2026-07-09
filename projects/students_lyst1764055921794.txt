@@ -1,0 +1,2 @@
+Arjun,100,90.3333,A,Chemistry:89,Maths:98,Physics:84
+Sweita,201,80.6667,B,bio:86,chemistry:91,physics:65
